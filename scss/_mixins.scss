@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+@mixin side-block {
+  font-size: $font-bigger;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+@mixin block {
+  color: $font-second-color;
+  font-size: $font-bigger;
+  text-align: center;
+}
+
+// FLEX MIXINS
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin side-block-wrap {
+  justify-content: flex-start;
+  margin: 0;
+  padding-left: 2rem;
+}
