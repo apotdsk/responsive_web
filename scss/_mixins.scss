@@ -24,3 +24,15 @@
   margin: 0;
   padding-left: 2rem;
 }
+
+// GRID
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin grid-side {
+  margin: 0;
+  padding-left: 2rem;
+  justify-items: start;
+}
