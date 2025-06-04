@@ -57,7 +57,7 @@ footer {
   background-color: $footer-color;
 }
 
-@media (width <= 800px) {
+@media (width <= $smaller-width) {
   main {
     display: grid;
     grid-template: 1fr 5fr 1fr / 1fr;
