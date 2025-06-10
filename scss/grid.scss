@@ -1,0 +1,81 @@
+@use "reset";
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+  font-family: var(--main-font);
+  font-size: var(--main-font-size);
+  height: 100%;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  min-height: 100vh;
+}
+
+header {
+  @include block;
+  @include grid-center;
+
+  background-color: $header-color;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+
+  nav {
+    @include side-block;
+    @include grid-center;
+
+    background-color: $nav-color;
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+
+  article {
+    h2 {
+      padding: 0.5rem 0;
+    }
+
+    margin: 2rem;
+  }
+
+  aside {
+    @include side-block;
+    @include grid-center;
+
+    background-color: $links-color;
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+}
+
+footer {
+  @include block;
+  @include grid-center;
+
+  background-color: $footer-color;
+}
+
+@media (width <= $smaller-width) {
+  main {
+    display: grid;
+    grid-template: 1fr 5fr 1fr / 1fr;
+
+    nav {
+      @include grid-side;
+
+      border-radius: 0 0 $border-radius $border-radius;
+    }
+
+    article {
+      margin: 1rem 2rem;
+    }
+
+    aside {
+      @include grid-side;
+
+      border-radius: $border-radius $border-radius 0 0;
+    }
+  }
+}

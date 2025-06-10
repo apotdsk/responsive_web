@@ -1,0 +1,13 @@
+:root {
+  --main-font: "Roboto", sans-serif;
+  --main-font-size: clamp(0.75rem, 1.25vw, 1rem);
+}
+
+$nav-color: #ffb40a;
+$links-color: #ffd36f;
+$header-color: #ea5e32;
+$footer-color: #a82800;
+$font-bigger: clamp(0.75rem, 1.5vw, 1.25rem);
+$font-second-color: white;
+$border-radius: 28px;
+$smaller-width: 800px;
